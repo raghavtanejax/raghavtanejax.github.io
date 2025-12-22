@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaPython, FaJs, FaJava, FaDatabase, FaGitAlt, FaLinux, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { SiFlask, SiDjango, SiMysql, SiFirebase, SiOpencv, SiLatex, SiFigma } from 'react-icons/si';
 
@@ -49,12 +48,7 @@ const Skills = () => {
     return (
         <section id="skills" className="section" style={{ background: 'var(--surface-color)' }}>
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
+                <div>
                     <h2 className="section-title">Technical Skills</h2>
 
                     <div style={{
@@ -63,13 +57,9 @@ const Skills = () => {
                         gap: '30px'
                     }}>
                         {skillsData.map((category, index) => (
-                            <motion.div
+                            <div
                                 key={index}
                                 className="glass-card"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
                             >
                                 <h3 style={{
                                     fontSize: '1.3rem',
@@ -97,10 +87,10 @@ const Skills = () => {
                                         </span>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -1,16 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const About = () => {
     return (
         <section id="about" className="section">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
+                <div>
                     <h2 className="section-title">About Me</h2>
 
                     <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -24,7 +18,7 @@ const About = () => {
                             I am actively seeking internship opportunities to apply my skills in building scalable backend systems and AI-powered applications.
                         </p>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

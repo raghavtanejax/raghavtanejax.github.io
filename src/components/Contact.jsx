@@ -1,17 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
     return (
         <section id="contact" className="section" style={{ paddingBottom: '50px' }}>
             <div className="container" style={{ textAlign: 'center' }}>
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
+                <div>
                     <h2 className="section-title">Get In Touch</h2>
 
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
@@ -40,7 +34,7 @@ const Contact = () => {
                         <p>&copy; {new Date().getFullYear()} Raghav Taneja. All rights reserved.</p>
                         <p style={{ marginTop: '10px' }}>Built with React & Vite</p>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

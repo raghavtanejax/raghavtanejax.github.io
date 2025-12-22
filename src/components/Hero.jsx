@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa';
 
 const Hero = () => {
@@ -12,11 +11,7 @@ const Hero = () => {
             background: 'radial-gradient(circle at center, rgba(0, 242, 234, 0.1) 0%, rgba(5, 5, 5, 1) 70%)'
         }}>
             <div className="container" style={{ textAlign: 'center' }}>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
+                <div>
                     <h2 style={{
                         fontSize: '1.5rem',
                         color: 'var(--primary-color)',
@@ -55,7 +50,7 @@ const Hero = () => {
                         <a href="#projects" className="btn">View Work</a>
                         <a href="#contact" className="btn btn-outline">Contact Me</a>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -14,10 +13,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <motion.nav
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
+        <nav
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#050505]/80 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
                 }`}
             style={{
@@ -29,7 +25,8 @@ const Navbar = () => {
                 zIndex: 1000,
                 top: 0,
                 left: 0,
-                borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none'
+                borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+                transition: 'all 0.3s ease'
             }}
         >
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -63,7 +60,7 @@ const Navbar = () => {
                     </a>
                 </div>
             </div>
-        </motion.nav>
+        </nav>
     );
 };
 

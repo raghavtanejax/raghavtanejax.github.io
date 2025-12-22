@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projectsData = [
@@ -59,12 +58,7 @@ const Projects = () => {
     return (
         <section id="projects" className="section">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
+                <div>
                     <h2 className="section-title">Projects</h2>
 
                     <div style={{
@@ -73,13 +67,9 @@ const Projects = () => {
                         gap: '30px'
                     }}>
                         {projectsData.map((project, index) => (
-                            <motion.div
+                            <div
                                 key={index}
                                 className="glass-card"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
                                 style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
                             >
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
@@ -109,10 +99,10 @@ const Projects = () => {
                                         <li key={idx} style={{ marginBottom: '5px' }}>{desc}</li>
                                     ))}
                                 </ul>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

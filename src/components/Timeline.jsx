@@ -1,17 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaGraduationCap, FaTrophy } from 'react-icons/fa';
 
 const Timeline = () => {
     return (
         <section id="timeline" className="section" style={{ background: 'var(--surface-color)' }}>
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                >
+                <div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '50px' }}>
 
                         {/* Education Column */}
@@ -68,7 +62,7 @@ const Timeline = () => {
                         </div>
 
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
